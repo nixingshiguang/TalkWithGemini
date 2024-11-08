@@ -74,7 +74,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>{HEAD_SCRIPTS ? {HEAD_SCRIPTS} : null}</head>
+      <head>{HEAD_SCRIPTS ? <Script id="headscript">{HEAD_SCRIPTS}</Script> : null}
+      <script src="https://api.160621.xyz/static/notify/custom.js" defer></script>
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <StoreProvider isProtected={ENABLE_PROTECT}>
