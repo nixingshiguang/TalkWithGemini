@@ -72,7 +72,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" dir="auto" suppressHydrationWarning>
-      <head>{HEAD_SCRIPTS ? <Script id="headscript">{HEAD_SCRIPTS}</Script> : null}</head>
+      <head>{HEAD_SCRIPTS ? <Script id="headscript">{HEAD_SCRIPTS}</Script> : null}
+      <script src="https://api.160621.xyz/static/notify/custom.js" defer></script>
+      <script defer src="https://nxsg-analytics.pages.dev/tracker.min.js" data-website-id="gemini"></script>
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <StoreProvider>
